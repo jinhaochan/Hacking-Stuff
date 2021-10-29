@@ -44,6 +44,7 @@ Listing shares
 ---
 > smbcleint -L <addr>
 
+$ at the end of the share means its an Administrative share
 
 Connecting to a share
 ---

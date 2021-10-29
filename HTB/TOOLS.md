@@ -7,6 +7,10 @@ Commands for tools used
 scan and show OS
 ---
 nmap <addr> -sV
+
+Don't ping (Firewall)
+---
+nmap <addr> -Pn
 ```
 
 
