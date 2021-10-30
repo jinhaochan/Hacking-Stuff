@@ -48,7 +48,7 @@ else:
     print "DID NOT WORK"
 ```
 
-### 2. RCE via file uploads
+## 2. RCE via file uploads
 
 https://blog.scrt.ch/2019/01/24/magento-rce-local-file-read-with-low-privilege-admin-rights/
 

