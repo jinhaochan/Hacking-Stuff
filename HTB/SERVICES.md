@@ -1,15 +1,6 @@
 Commands for regular services
 ---
 
-## nmap
-
-```
-scan and show OS
----
-nmap <addr> -sV
-```
-
-
 ## FTP
 
 ports

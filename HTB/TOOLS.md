@@ -11,6 +11,10 @@ nmap <addr> -sV
 Don't ping (Firewall)
 ---
 nmap <addr> -Pn
+
+UDP
+---
+nmap <addr> -sU
 ```
 
 
@@ -32,9 +36,11 @@ gobuster dir -x php -u 10.129.255.70 -w /usr/share/wordlists/dirb/common.txt
 ## John the ripper
 
 ```
-zip2john <zipfile> <output-hashfile>
 
-john <output-hashfile>
+zip2john <file.zip> 2>/dev/null | tee <file.hash>
+
+john <file.hash> --wordlist=/usr/share/wordlists/rockyou.txt --format=<format>
+
 ```
 
 
@@ -43,3 +49,4 @@ john <output-hashfile>
 ```
 sqlmap -u "<url>" --cookie="<key=values>" --os-shell
 ```
+
