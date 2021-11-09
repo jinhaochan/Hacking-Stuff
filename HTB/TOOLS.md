@@ -50,3 +50,38 @@ john <file.hash> --wordlist=/usr/share/wordlists/rockyou.txt --format=<format>
 sqlmap -u "<url>" --cookie="<key=values>" --os-shell --user-agent "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0" 
 ```
 
+## cadaver
+
+```
+For WebDAV applications
+---
+cadaver <website>
+```
+
+## Proxy chains
+
+```
+adding a proxy
+---
+
+edit /etc/proxychains4.conf 
+
+add --> http <ip> <port>
+
+$ proxychains ssh user@<ip>
+```
+
+## netcat enumeration
+
+```
+finding open ports internally
+---
+nc -zv 192.168.0.1 1-65535 2>&1 | grep -v "refused"
+```
+
+
+## tftp
+
+allows putting/getting of files without specifying permission
+
+check for `/etc/default/tftpd-hpa`
