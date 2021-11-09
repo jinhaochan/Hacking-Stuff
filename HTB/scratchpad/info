@@ -1,7 +1,0 @@
-/etc/passwd
-root:x:0:0:root:/root:/bin/bash
-cobb:x:1000:1000::/home/cobb:/bin/bash
-
-
-mysql
-root:VwPddNh7xMZyDQoByQL4
