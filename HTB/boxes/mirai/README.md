@@ -1,4 +1,4 @@
-nibbles
+mirai
 ---
 
 ## Steps
@@ -11,7 +11,8 @@ We find the page `/admin/`
 
 `pi:raspberry`
 
-3. root flag
+## Root Flag
+1. Look at the history and run strings on it
 
 `sudo cat /root/.bash_history`
 
