@@ -85,3 +85,11 @@ nc -zv 192.168.0.1 1-65535 2>&1 | grep -v "refused"
 allows putting/getting of files without specifying permission
 
 check for `/etc/default/tftpd-hpa`
+
+
+## SSH port forwarding
+
+copy your pub key to the victim under `/home/user/.ssh/authorized_keys`
+
+`ssh -i key -L 8000:127.0.0.1:8000 <user>@<ip>`
+
