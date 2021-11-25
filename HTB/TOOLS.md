@@ -128,3 +128,8 @@ pip install pyjwt
 >>> encoded_jwt = jwt.encode({"some": "payload"}, "secret", algorithm="HS256")
 ```
 
+## SUBDOMAIN ENUM
+
+```
+wfuzz -c -f sub-fighter -w SecLists-master/Discovery/DNS/subdomains-top1million-20000.txt -u 'http://shibboleth.htb' -H "Host: FUZZ.shibboleth.htb" --hw <hide number of words>
+```
