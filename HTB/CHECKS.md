@@ -26,3 +26,19 @@ ss -tuan | grep LISTEN
 ---
 Find all listening services
 ```
+
+Config files credentials
+---
+
+```
+/etc/mysql/my.cnf
+
+/etc/apache2/sites-enabled/000-default.conf
+```
+
+Processes running
+---
+```
+for val in range(1,1000):
+    get "/proc/<val>/cmdline"
+```
