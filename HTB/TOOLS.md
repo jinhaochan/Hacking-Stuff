@@ -131,5 +131,5 @@ pip install pyjwt
 ## SUBDOMAIN ENUM
 
 ```
-wfuzz -c -f sub-fighter -w SecLists-master/Discovery/DNS/subdomains-top1million-20000.txt -u 'http://shibboleth.htb' -H "Host: FUZZ.shibboleth.htb" --hw <hide number of words>
+wfuzz -w SecLists-master/Discovery/DNS/subdomains-top1million-20000.txt -H "Host: FUZZ.nunchucks.htb"  -u 'https://nunchucks.htb' --hh <word size>
 ```
