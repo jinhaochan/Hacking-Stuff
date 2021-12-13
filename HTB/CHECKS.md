@@ -1,6 +1,3 @@
-Default credentials
----
-
 ```
 id
 ---
@@ -25,6 +22,12 @@ find all binaries with sticky bit set
 ss -tuan | grep LISTEN
 ---
 Find all listening services
+
+getcap -r / 2>/dev/null
+---
+gets capabilities of binaries
+https://gtfobins.github.io/#+capabilities
+
 ```
 
 Config files credentials
