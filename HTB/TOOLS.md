@@ -133,3 +133,10 @@ pip install pyjwt
 ```
 wfuzz -w SecLists-master/Discovery/DNS/subdomains-top1million-20000.txt -H "Host: FUZZ.nunchucks.htb"  -u 'https://nunchucks.htb' --hh <word size>
 ```
+
+## MySQL
+
+run one liner mysqls
+```
+mysql -u <user> <db> --password=<pass> -e 'select * from users;'
+```
