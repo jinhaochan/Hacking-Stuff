@@ -140,3 +140,13 @@ run one liner mysqls
 ```
 mysql -u <user> <db> --password=<pass> -e 'select * from users;'
 ```
+
+## Searchsploit
+
+Searches for exploits for specific versions
+
+Can filter by date too
+
+```
+searchsploit -j <name of software> | jq .
+```
