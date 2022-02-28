@@ -21,5 +21,10 @@
 10. Check Processes running in /proc
 ```
 for val in range(1,1000):
-    get "/proc/<val>/cmdline"
+    try:
+        with open("/proc/"+str(val)+"/cmdline", 'r') as f:
+            lines = f.readlines()
+            print(lines)
+    except:
+        pass
 ```
