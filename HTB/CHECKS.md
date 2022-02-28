@@ -1,46 +1,20 @@
-```
-id
----
-Check what groups you are in
-
-
-find / -group <group> -type f 2>/dev/null
----
-find all binaries that this group can run
-
-
-sudo -l
----
-shows all command this user can run as sudo
-
-
-find / -perm -u=s -type f 2>/dev/null
----
-find all binaries with sticky bit set
-
-
-ss -tuan | grep LISTEN
----
-Find all listening services
-
-getcap -r / 2>/dev/null
----
-gets capabilities of binaries
-https://gtfobins.github.io/#+capabilities
-
-```
-
-Config files credentials
----
-
-```
-/etc/mysql/my.cnf
-
-/etc/apache2/sites-enabled/000-default.conf
-```
-
-Processes running
----
+1. Check what groups you are in
+    - `id` 
+2. Find all binaries that this group can run
+    - `find / -group <group> -type f 2>/dev/null`
+3. Shows all command this user can run as sudo
+    - `sudo -l`
+4. find all binaries with sticky bit set
+    - `find / -perm -u=s -type f 2>/dev/null`
+5. Find all listening services
+    - `ss -tuan | grep LISTEN`
+6. Gets capabilities of binaries
+    - `getcap -r / 2>/dev/null`
+    - https://gtfobins.github.io/#+capabilities
+7. Check configuration files
+    - `/etc/mysql/my.cnf`
+    - `/etc/apache2/sites-enabled/000-default.conf`
+8. Check Processes running in /proc
 ```
 for val in range(1,1000):
     get "/proc/<val>/cmdline"
