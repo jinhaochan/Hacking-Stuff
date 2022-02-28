@@ -18,7 +18,8 @@
 8. Check mail
     - `/var/mail`
     - `/var/spool/mail`
-10. Check Processes running in /proc
+9. Check for most recently modified files
+11. Check Processes running in /proc
 ```
 for val in range(1,1000):
     try:
