@@ -68,7 +68,7 @@ edit /etc/proxychains4.conf
 
 examples:
 http <ip> <port>
-socks5 <localhost> <port> <user> <password>
+socks5 <victim service> <victim port> <user> <password>
 
 $ proxychains ssh user@<ip>
 ```
