@@ -14,7 +14,7 @@
     - https://gtfobins.github.io/#+capabilities
 7. Check configuration files
     - `/etc/mysql/my.cnf`
-    - `/etc/apache2/sites-enabled/000-default.conf`
+    - `/etc/apache2/sites-enabled/*`
 8. Check Processes running in /proc
 ```
 for val in range(1,1000):
