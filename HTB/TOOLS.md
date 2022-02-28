@@ -91,7 +91,9 @@ check for `/etc/default/tftpd-hpa`
 
 append your pub key to `/home/user/.ssh/authorized_keys`
 
-`ssh -i key -L 8000:127.0.0.1:8000 <user>@<ip>`
+On your attacker machine:
+
+`ssh -L <local port>:<victime service>:<victim port> <victim>@<ip>`
 
 
 ## Adding your SSH to the victim
