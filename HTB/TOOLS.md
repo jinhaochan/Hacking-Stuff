@@ -95,6 +95,9 @@ On your attacker machine:
 
 `ssh -L <local port>:<victim service>:<victim port> <victim>@<ip>`
 
+OR using dynamic forwarding for attacks
+
+`ssh -D <local port> <victim>@<ip>`
 
 ## Adding your SSH to the victim
 ```
