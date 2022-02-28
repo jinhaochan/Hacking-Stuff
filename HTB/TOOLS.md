@@ -93,7 +93,7 @@ append your pub key to `/home/user/.ssh/authorized_keys`
 
 On your attacker machine:
 
-`ssh -L <local port>:<victime service>:<victim port> <victim>@<ip>`
+`ssh -L <local port>:<victim service>:<victim port> <victim>@<ip>`
 
 
 ## Adding your SSH to the victim
