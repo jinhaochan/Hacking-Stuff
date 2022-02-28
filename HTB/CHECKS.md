@@ -15,7 +15,10 @@
 7. Check configuration files
     - `/etc/mysql/my.cnf`
     - `/etc/apache2/sites-enabled/*`
-8. Check Processes running in /proc
+8. Check mail
+    - `/var/mail`
+    - `/var/spool/mail`
+10. Check Processes running in /proc
 ```
 for val in range(1,1000):
     get "/proc/<val>/cmdline"
