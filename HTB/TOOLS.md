@@ -66,7 +66,9 @@ adding a proxy
 
 edit /etc/proxychains4.conf 
 
-add --> http <ip> <port>
+examples:
+http <ip> <port>
+socks5 <localhost> <port> <user> <password>
 
 $ proxychains ssh user@<ip>
 ```
