@@ -41,3 +41,5 @@ Typically involves running a reverse shell
 
 Once on the server:
 1. Run [Checks](https://github.com/jinhaochan/HTB/blob/master/HTB/CHECKS.md)
+
+Try both `/tmp` and `/dev/shm` for file writes
