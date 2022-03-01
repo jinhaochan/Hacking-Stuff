@@ -4,6 +4,7 @@
     - `find / -group <group> -type f 2>/dev/null`
 3. Shows all command this user can run as sudo
     - `sudo -l`
+    - Check for configs that are preserved with `env_keep` which can be used to preload custom files
 4. find all binaries with sticky bit set
     - `find / -perm -u=s -type f 2>/dev/null`
 5. Find all listening services
