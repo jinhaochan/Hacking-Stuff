@@ -21,7 +21,9 @@
     - `/var/mail`
     - `/var/spool/mail`
 10. Check for most recently modified files
-11. Check Processes running in /proc
+11. Run pspy64 to check running process (likely cron)
+    - https://github.com/DominicBreuker/pspy
+12. Check Processes running in /proc
 ```
 for val in range(1,1000):
     try:
