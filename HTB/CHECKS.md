@@ -17,7 +17,10 @@
     - https://gtfobins.github.io/#+capabilities
 8. Check configuration files
     - `/etc/mysql/my.cnf`
-    - `/etc/apache2/sites-enabled/*`
+    - `/etc/apache2/apache2.conf`
+    - `/etc/apache2/sites-enabled/000-default`
+    - `etc/nginx/sites-available/default`
+    - `etc/nginx/nginx.conf`
 9. Check mail
     - `/var/mail`
     - `/var/spool/mail`
