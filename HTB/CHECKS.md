@@ -9,16 +9,18 @@
 5. Find all listening services
     - `ss -tuan | grep LISTEN`
     - Use SSH portforwarding to forward the service to your machine
-6. Gets capabilities of binaries
+6. Check for local services
+    - `nc -zv 192.168.0.1 1-65535 2>&1 | grep -v "refused"`
+7. Gets capabilities of binaries
     - `getcap -r / 2>/dev/null`
     - https://gtfobins.github.io/#+capabilities
-7. Check configuration files
+8. Check configuration files
     - `/etc/mysql/my.cnf`
     - `/etc/apache2/sites-enabled/*`
-8. Check mail
+9. Check mail
     - `/var/mail`
     - `/var/spool/mail`
-9. Check for most recently modified files
+10. Check for most recently modified files
 11. Check Processes running in /proc
 ```
 for val in range(1,1000):
