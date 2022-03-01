@@ -10,7 +10,7 @@
     - `ss -tuan | grep LISTEN`
     - Use SSH portforwarding to forward the service to your machine
 6. Check for local services
-    - `nc -zv 192.168.0.1 1-65535 2>&1 | grep -v "refused"`
+    - `nc -zv 1277.0.0.1 1-65535 2>&1 | grep -v "refused"`
 7. Gets capabilities of binaries
     - `getcap -r / 2>/dev/null`
     - https://gtfobins.github.io/#+capabilities
