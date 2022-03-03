@@ -18,8 +18,8 @@
 8. Check configuration files
     - `/etc/mysql/my.cnf`
     - `/etc/apache2/apache2.conf`
-    - `/etc/apache2/sites-enabled/000-default`
-    - `etc/nginx/sites-available/default`
+    - `/etc/apache2/sites-enabled/000-default.conf`
+    - `etc/nginx/sites-available/default.conf`
     - `etc/nginx/nginx.conf`
 9. Check mail
     - `/var/mail`
