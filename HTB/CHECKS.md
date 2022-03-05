@@ -27,9 +27,11 @@
 10. Check interesting folders
     - `/opt` 
 11. Check for most recently modified files
-12. Run pspy64 to check running process (likely cron)
+12. If in group `adm`, check `/var/logs/audit`
+    - `aureport --help`
+13. Run pspy64 to check running process (likely cron)
     - https://github.com/DominicBreuker/pspy
-13. Check Processes running in /proc
+14. Check Processes running in /proc
 ```
 for val in range(1,1000):
     try:
