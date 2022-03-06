@@ -33,4 +33,6 @@ timing
   
 3. modify the behavior of the binary with a config file e.g. `.binaryrc`
   
+4. write to `authorized_keys` and gain root flag
+  
 </details>
