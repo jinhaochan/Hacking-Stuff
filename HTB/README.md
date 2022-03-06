@@ -24,7 +24,7 @@ Find running services
 Find running versions
 1. CMS
 2. Database
-3. Webserver
+3. Webserver (CHECK SERVER HEADERS)
 4. etc
 
 ## 3. Vulnerability Discovery
