@@ -18,7 +18,7 @@ File Discovery
 ## 2. Service discovery
 
 Find running services
-1. `nmap -sV -p- <target>`
+1. `nmap -sSV -Pn -p- -A <target>`
 2. `nmap -sU -v <target>`
 
 Find running versions
