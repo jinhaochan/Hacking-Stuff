@@ -36,11 +36,17 @@ gobuster dir -x php -u 10.129.255.70 -w /usr/share/wordlists/dirb/common.txt
 ## John the ripper
 
 ```
-
+cracking a zipfile
+---
 zip2john <file.zip> 2>/dev/null | tee <file.hash>
 
+normal hash cracking
+---
 john <file.hash> --wordlist=/usr/share/wordlists/rockyou.txt --format=<format>
 
+mangle variations of a known password
+---
+john key.hash --rules <known passwords> --wordlist=/usr/share/wordlists/rockyou.txt
 ```
 
 
