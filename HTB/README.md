@@ -1,45 +1,13 @@
 # General Approach to HTB
 
-After you have obtained the target IP address, these are some general approaches
+1. `wfuzz -w SecLists/Discovery/DNS/subdomains-top1million-20000.txt -H "Host: FUZZ.<domain>"  -u 'http://<domain>' --hh <word size>`
+2. `gobuster dir -u <addr> -w /usr/share/wordlist/dirb/common.txt`
+3. `gobuster dir -x php,txt -u 10.129.255.70 -w /usr/share/wordlists/dirb/common.txt`
+4. `nmap -sSV -Pn -p- -A <target>`
+5. `nmap -sU -v <target> --min-rate=50`
 
-## 1. Footprinting target
-
-Subdomain Discovery
-1. Map a domain to the IP address in `/etc/hosts`
-2. run `wfuzz -w SecLists/Discovery/DNS/subdomains-top1million-20000.txt -H "Host: FUZZ.<domain>"  -u 'http://<domain>' --hh <word size>`
-
-Path Discovery
-1. `gobuster dir -u <addr> -w /usr/share/wordlist/dirb/common.txt`
-
-File Discovery
-1. `gobuster dir -x php -u 10.129.255.70 -w /usr/share/wordlists/dirb/common.txt`
-
-
-## 2. Service discovery
-
-Find running services
-1. `nmap -sSV -Pn -p- -A <target>`
-2. `nmap -sU -v <target>`
-
-Find running versions
-1. CMS
-2. Database
-3. Webserver (CHECK 404 MAILTO ADDRESS)
-4. etc
-
-## 3. Vulnerability Discovery
-
-For each service running and their versions find related vulnerabilities to gain access to the server (draw the rest of the fucking owl)
-
-[Non-exhuastive exploits](https://github.com/jinhaochan/HTB/blob/master/HTB/EXPLOITS.md)
-
-Typically involves running a reverse shell
-- [Web Shells](https://github.com/jinhaochan/HTB/blob/master/HTB/EXPLOITS.md#webshells)
-- [Reverse Shells](https://github.com/jinhaochan/HTB/blob/master/HTB/EXPLOITS.md#nc-reverse-shells)
-
-## 4. Privilege Escalation
-
-Once on the server:
-1. Run [Checks](https://github.com/jinhaochan/HTB/blob/master/HTB/CHECKS.md)
-
-Try both `/tmp` and `/dev/shm` for file writes
+Other stuff
+- Check SSL cert
+- Check email domains
+- Check 404 pages
+- Try both `/tmp` and `/dev/shm` for file writes
