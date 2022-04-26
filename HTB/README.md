@@ -6,7 +6,7 @@ nmap
 
 Sub-domain Enum
 1. `wfuzz -w SecLists/Discovery/DNS/subdomains-top1million-20000.txt -H "Host: FUZZ.<domain>"  -u 'http://<domain>' --hh <word size>`
-2. `ffuf -w /opt/useful/SecLists/Discovery/Web-Content/burp-parameter-names.txt:FUZZ -u 'http://1.1.1.1:2222/' -H 'HOST: FUZZ.website.com' -fs 2309`
+2. `ffuf -w SecLists/Discovery/Web-Content/burp-parameter-names.txt:FUZZ -u 'http://1.1.1.1:2222/' -H 'HOST: FUZZ.website.com' -fs 2309`
 3. `python3 sublist3r -d <domain>`
 
 Sub-Directoy Enum
