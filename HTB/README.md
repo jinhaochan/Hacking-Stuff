@@ -10,11 +10,12 @@ Sub-domain Enum
 3. `python3 sublist3r -d <domain>`
 
 Sub-Directoy Enum
-1. `ffuf -w ~/SecLists/Discovery/Web-Content/directory-list-2.3-small.txt:FUZZ -u "http://167.71.139.140:31516/FUZZ" -recursion -recursion-depth 1 -e .php`
+1. `ffuf -w SecLists/Discovery/Web-Content/directory-list-2.3-small.txt:FUZZ -u "http://167.71.139.140:31516/FUZZ" -recursion -recursion-depth 1 -e .php`
 2. `gobuster dir -x php,txt -u 10.129.255.70 -w /usr/share/wordlists/dirb/common.txt`
 
 Parameter Fuzzing
-1. `ffuf -w /opt/useful/SecLists/Fuzzing/LFI/LFI-Jhaddix.txt:FUZZ -u 'http://<SERVER_IP>:<PORT>/index.php?language=FUZZ' -fs 2287`
+1. `ffuf -w SecLists/Fuzzing/LFI/LFI-Jhaddix.txt:FUZZ -u 'http://<SERVER_IP>:<PORT>/index.php?language=FUZZ' -fs 2287`
+2. `ffuf -w SecLists/Discovery/Web-Content/burp-parameter-names.txt:FUZZ -u http://<domain>:<port>/admin/admin.php -X POST -d 'FUZZ=key' -H 'Content-Type: application/x-www-form-urlencoded' -fs xxx`
 
 
 Other stuff
