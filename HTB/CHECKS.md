@@ -32,7 +32,8 @@
 13. Run pspy64 to check running process (likely cron)
     - https://github.com/DominicBreuker/pspy
 14. Check the mounts `/dev/sda*`
-15. Check Processes running in /proc
+15. Check binaries being used that do not use absolute path `ltrace <binary> 2> out`
+16. Check Processes running in /proc
 ```
 for val in range(1,1000):
     try:
