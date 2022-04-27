@@ -1,55 +1,3 @@
-Commands for tools used 
----
-
-## nmap
-
-```
-scan and show OS
----
-nmap <addr> -sV
-
-Don't ping (Firewall)
----
-nmap <addr> -Pn
-
-UDP
----
-nmap <addr> -sU
-```
-
-
-## Gobuster
-for enumerating website paths
-
-```
-finding dirs
----
-gobuster dir -u <addr> -w /usr/share/wordlist/dirb/common.txt
-
-
-searching for specific file type + dirs
----
-gobuster dir -x php -u 10.129.255.70 -w /usr/share/wordlists/dirb/common.txt
-```
-
-
-## John the ripper
-
-```
-cracking a zipfile
----
-zip2john <file.zip> 2>/dev/null | tee <file.hash>
-
-normal hash cracking
----
-john <file.hash> --wordlist=/usr/share/wordlists/rockyou.txt --format=<format>
-
-mangle variations of a known password
----
-john key.hash --rules <known passwords> --wordlist=/usr/share/wordlists/rockyou.txt
-```
-
-
 ## sqlmap
 
 ```
@@ -79,14 +27,6 @@ socks5 <victim service> <victim port> <user> <password>
 $ proxychains ssh user@<ip>
 ```
 
-## netcat enumeration
-
-```
-finding open ports internally
----
-nc -zv 192.168.0.1 1-65535 2>&1 | grep -v "refused"
-```
-
 
 ## tftp
 
@@ -106,6 +46,7 @@ On your attacker machine:
 OR using dynamic forwarding for attacks
 
 `ssh -D <local port> <victim>@<ip>`
+
 
 ## Adding your SSH to the victim
 ```
@@ -139,27 +80,4 @@ pip install pyjwt
 
 >>> import jwt
 >>> encoded_jwt = jwt.encode({"some": "payload"}, "secret", algorithm="HS256")
-```
-
-## SUBDOMAIN ENUM
-
-```
-wfuzz -w SecLists-master/Discovery/DNS/subdomains-top1million-20000.txt -H "Host: FUZZ.nunchucks.htb"  -u 'https://nunchucks.htb' --hh <word size>
-```
-
-## MySQL
-
-run one liner mysqls
-```
-mysql -u <user> <db> --password=<pass> -e 'select * from users;'
-```
-
-## Searchsploit
-
-Searches for exploits for specific versions
-
-Can filter by date too
-
-```
-searchsploit -j <name of software> | jq .
 ```
