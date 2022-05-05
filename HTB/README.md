@@ -37,6 +37,8 @@ SQLmap
 
 `--risk=3` for more aggressive SQLi detection
 
+manually specify number of union columns with `--union-cols=n`
+
 Other stuff
 - Check SSL cert
 - Check email domains
