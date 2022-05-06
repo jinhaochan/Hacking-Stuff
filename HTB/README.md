@@ -39,9 +39,13 @@ SQLmap
 
 `--no-cast` to ensure correct data is gotten from blind sql
 
-`--risk=3` for more aggressive SQLi detection
+`--risk=3` and `--level=5` for more aggressive SQLi detection
 
-manually specify number of union columns with `--union-cols=n`
+`--prefix` and `--suffix` to predefine the wrappers
+
+`--csrf-token` to define the variable name that is the token
+
+`--union-cols=n` to manually specify number of union columns 
 
 Proxy chains
 ---
