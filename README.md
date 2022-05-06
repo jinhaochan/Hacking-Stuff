@@ -27,6 +27,10 @@
 
 # Web Attacks
 
+SQL Injection
+- [sqlmap](https://github.com/jinhaochan/HTB/tree/master/Academy/SQLmap)
+- [sql injection](https://github.com/jinhaochan/HTB/tree/master/Academy/SQL%20Injection)
+- [file inclusion](https://github.com/jinhaochan/HTB/tree/master/Academy/File_Inclusion)
 
 
 Proxy chains
